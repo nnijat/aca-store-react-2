@@ -24,5 +24,9 @@ function Layout(props) {
             </div>
         </div>
     )
+}
 
+Layout.propTypes = {
+    cart: PropTypes.array.isRequired,
+    changeHomePage: PropTypes.func.isRequired
 }

@@ -13,3 +13,8 @@ function ProductList(props) {
         </div>
     )
 }
+
+ProductList.propTypes = {
+    products: PropTypes.array.isRequired,
+    addToCart: PropTypes.func.isRequired
+}

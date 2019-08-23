@@ -19,7 +19,7 @@ class App extends React.Component {
     componentDidMount() {
         fetch("https://acastore.herokuapp.com/products")
             .then(r => r.json())
-            .then(d => this.setState({ products: d }));
+            .then(p => this.setState({ products: p }));
     }
 
     render() {
@@ -44,10 +44,13 @@ class App extends React.Component {
                 cart={this.state.shoppingCart}
                 addItemToCart={this.addItemToCart}
                 products={this.state.products}
-                changeView = {this.changeView}
+                changeView={this.changeView}
             >
                 {content}
             </Layout>
         );
     }
+}
+App.propTypes = {
+    products: PropTypes.array.isRequired
 }
