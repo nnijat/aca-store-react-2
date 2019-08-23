@@ -1,7 +1,7 @@
 function Layout(props) {
     return (
         <div className="App">
-            <Header cart={props.cart} />
+            <Header cart={props.cart} changeView={props.changeView} />
             <div className="container">
                 <div className="row">
                     <div className="col-md-3">
@@ -15,7 +15,7 @@ function Layout(props) {
                     {/*comments */}
                     <div className="col-md-9">
                         <Carousel />
-                        
+                        {props.children}
                     </div>
                 </div>
             </div>
@@ -25,5 +25,9 @@ function Layout(props) {
             </div>
         </div>
     )
+}
 
+Layout.propTypes = {
+    cart: PropTypes.array.isRequired,
+    changeHomePage: PropTypes.func.isRequired
 }

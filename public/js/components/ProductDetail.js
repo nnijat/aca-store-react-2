@@ -56,3 +56,7 @@ function ProductDetail(props) {
             </div>
         </div>);
 }
+ProductDetail.propTypes = {
+    product: PropTypes.object.isRequired,
+    addToCart: PropTypes.func.isRequired
+}
