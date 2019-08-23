@@ -9,7 +9,7 @@ function ProductList(props) {
 
     return (
         <div className="row">
-            {props.productDetails}
+            {productDetails}
         </div>
     )
 }

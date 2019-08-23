@@ -1,6 +1,7 @@
 class App extends React.Component {
     state = {
-        shoppingCart: []
+        shoppingCart: [],
+        products: state.products,
     }
     addItemToCart = (product) => {
         this.setState(() => {
@@ -9,12 +10,12 @@ class App extends React.Component {
         })
     }
     render() {
-        
         return (
             <Layout
                 cart={this.state.shoppingCart}
                 addItemToCart={this.addItemToCart}
-            > </Layout>
+            >
+            </Layout>
         );
     }
 }
