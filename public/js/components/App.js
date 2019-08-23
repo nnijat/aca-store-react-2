@@ -11,7 +11,11 @@ class App extends React.Component {
             return { shoppingCart: this.state.shoppingCart }
         })
     }
-
+    changeView = (num) => {
+        this.setState(() => {
+            return { homePage: num };
+        })
+    }
     componentDidMount() {
         fetch("https://acastore.herokuapp.com/products")
             .then(r => r.json())
@@ -40,6 +44,7 @@ class App extends React.Component {
                 cart={this.state.shoppingCart}
                 addItemToCart={this.addItemToCart}
                 products={this.state.products}
+                changeView = {this.changeView}
             >
                 {content}
             </Layout>
