@@ -1,12 +1,12 @@
 function ShoppingCart(props) {
-    const shoppingCartDetails = props.shoppingCart.map((p, i) => {
+    const shoppingCartDetails = props.cart.map((p, i) => {
         return <ProductDetail
             key={i}
             product={p} />
     });
 
     return (
-        <div>
+        <div className="row">
             {shoppingCartDetails}
             <button>Checkout</button>
         </div>

@@ -15,7 +15,6 @@ function Layout(props) {
                     {/*comments */}
                     <div className="col-md-9">
                         <Carousel />
-                        
                     </div>
                 </div>
             </div>
